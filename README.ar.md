@@ -7,9 +7,9 @@
 <p align="center"><a href="README.md"><b>Read this guide in English</b></a> · <a href="#installation">التثبيت</a> · <a href="#first-use">جرّبها</a> · <a href="#questions">أسئلة وأجوبة</a> · <a href="#share">شاركها</a></p>
 
 <p align="center">
-  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-6366f1"></a>
-  <a href="docs/agent-installation.ar.md"><img alt="Guides for 15 agents" src="https://img.shields.io/badge/agent%20guides-15-8b5cf6"></a>
-  <img alt="English and Arabic guides" src="https://img.shields.io/badge/English%20%2B%20Arabic-guides-0e9f8a">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-15130F"></a>
+  <a href="docs/agent-installation.ar.md"><img alt="Guides for 15 agents" src="https://img.shields.io/badge/agent%20guides-15-FFE04A"></a>
+  <img alt="English and Arabic guides" src="https://img.shields.io/badge/English%20%2B%20Arabic-guides-15130F">
 </p>
 
 ---

@@ -78,3 +78,5 @@ Use the project's existing organization; these are defaults, not additional bure
 - `docs/`: architecture/module interactions, decisions, product walkthrough, verification and provider activation as needed.
 
 Keep private identity, account data and raw conversations out of shared skill packages. The optional local profile is installed separately. This skill works with host capabilities; it does not require a particular connector, native goal tool, browser, multi-agent runtime or external account.
+
+For explanatory infographics about this skill, use [the infographic brand style](references/brand-style.md). Software products being built retain the founder's own approved design direction.
