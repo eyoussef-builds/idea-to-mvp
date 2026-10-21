@@ -1,107 +1,238 @@
-# Idea to MVP
+<p align="center">
+  <img src="docs/images/banner-en.svg" alt="Idea to MVP — tell your AI the idea, build it together" width="100%">
+</p>
 
-[العربية](README.ar.md) · [Install for 15 agents](docs/agent-installation.md) · [Privacy](docs/privacy.md) · [MIT license](LICENSE)
+<p align="center"><a href="README.ar.md"><b>اقرأ هذا الدليل بالعربية</b></a> · <a href="#installation">Install</a> · <a href="#first-use">Try it</a> · <a href="#questions">Questions &amp; answers</a></p>
 
-**Tell your AI a rough software idea. Let it research, ask useful questions, write the plan, and guide an approved build.**
-
-Imagine building a toy house. First you decide who it is for. Then you draw it. Then you choose the pieces. Only then do you build and check that the doors open. This skill teaches a coding assistant to work in that order, so you do not have to explain the same process every time.
-
-## What is a skill?
-
-A skill is a folder containing an instruction book called `SKILL.md`, plus useful templates and notes. Your AI reads the book when you ask for this kind of work. It is not a separate AI, subscription, or website. You still need a coding agent with an account and suitable tools.
-
-**MVP** means the first useful version of a product: a small complete experience people can actually use. It does not mean a page of buttons that do nothing. Your approved scope decides what must be built.
-
-## Start here: the easiest installation
-
-If your agent can download files and install skills, paste this into its chat:
-
-```text
-Install the idea-to-mvp skill from https://github.com/eyoussef-builds/idea-to-mvp.
-Read its installation guide and inspect the skill before installing.
-Install the complete skills/idea-to-mvp folder in the supported personal skill
-directory for this agent. Preserve any existing customized copy.
-Tell me the installed location and how to invoke it. Do not start a project yet.
-```
-
-The agent may ask for permission to download or write to your skill directory. Read that request. If it cannot install files, follow the [step-by-step guide for your agent](docs/agent-installation.md), including a no-terminal download method and Windows instructions.
-
-## Your first project, step by step
-
-1. Open a folder where you want the new project to live. Start your coding agent there.
-2. Ask it to use the skill. In Codex, paste:
-
-   ```text
-   Use $idea-to-mvp. Let's start a new project.
-   My rough idea is an app that helps people plan meals from ingredients they have.
-   Please research it, then interview me with recommendations before building.
-   ```
-
-3. Add any websites, screenshots, audience details or rough notes you already have. Messy notes are fine. The meal-planning example is fictional; replace it with your idea.
-4. Answer the questions. Each question should come with a recommendation and a short reason. You can say “all recommended, except…” to accept the current suggestions while changing anything you dislike.
-5. Review `project.md`. Think of it as the picture on the toy box: what you are making, who uses it, how it works, and what counts as finished. The assistant also prepares a small screen/output preview unless you skip it.
-6. Correct anything missing. The interview usually uses small batches of questions, but there is no fixed total. A material unanswered question still needs an answer.
-7. When you want implementation, give a clear handoff. For example:
-
-   ```text
-   The plan is approved. Use official GitHub Spec Kit, set a goal if supported,
-   and build the MVP described in project.md. Implement and test the complete
-   agreed scope. Ask me about missing ownership, deployment or budget decisions
-   before using external services. Do not invent account access or credentials.
-   ```
-
-8. Review the delivered application, checks and activation instructions. A real payment or email integration is only verified when the required real checks have actually happened.
-
-Other agents use their own invocation syntax; see the installation guide. A natural request such as “let's start a new project” may select the skill automatically, but explicitly naming it is the clearest way to check.
-
-## What the assistant does behind the scenes
-
-| Stage | Plain explanation | What you get |
-| --- | --- | --- |
-| Research | Looks at the problem, references, alternatives and important current facts. | Cited findings in `research/`. |
-| Interview | Asks about the customer, journey, product rules, design, price and operations. | Accepted choices, reasons and unresolved questions. |
-| Product definition | Turns those decisions into a clear description and a useful preview. | `project.md` and a core screen/output example. |
-| Setup check | Checks the real tools, accounts, delivery target and spending limits. | Explicit setup decisions instead of guessed access. |
-| Official Spec Kit | Uses GitHub's toolkit to turn the agreed product into requirements and tasks. | Constitution, specifications, plan, checks and tasks. |
-| Build and verify | Implements the agreed journeys, tests important behavior and checks the UI where tools allow. | Working implementation and honest verification evidence. |
-| Authorized release | Finishes the agreed repository/deployment work and explains provider activation. | Usable output, handoff and any explicitly deferred checks. |
-
-The workflow state lives in `docs/workflow-state.md`, so a later session can continue from the current phase rather than asking everything again. A native persistent goal is used only when authorized and supported; a state file is not a background scheduler.
-
-## What is GitHub Spec Kit?
-
-It is an official, separate toolkit from GitHub for building from written specifications. Think of this skill as the guide who helps you decide what to build, and Spec Kit as the organized instruction sheets for building it. This repository does not bundle Spec Kit or impersonate its commands.
-
-Your assistant checks the installed version and the actual integration for your agent. It should follow the [official quickstart](https://github.github.io/spec-kit/quickstart.html), not blindly copy an old command. Installation may require separate tooling. See the [Spec Kit handoff](skills/idea-to-mvp/references/spec-kit.md).
-
-## Choose what “finished” means
-
-- **Credential-ready:** the agreed independent work is finished, with secure setup instructions for specifically accepted missing provider credentials/checks. Those checks remain clearly pending.
-- **Fully activated:** the required providers are configured and the agreed real end-to-end checks are completed.
-
-Choose this with the assistant. It must not silently change a fully activated target into credential-ready just because an integration is difficult.
-
-## What you need, and what installation does not do
-
-You need an agent that can read files. Research needs browsing; building needs file and terminal tools; visual checks need browser tools. Cloud deployment and paid providers need your own accounts, access and spending decisions. The assistant should inspect existing authorized access before asking you to repeat setup.
-
-Installing this instruction folder does not buy services, create a schedule, grant access to accounts, approve public releases, or make every agent support the same tools. You can stop at research or planning. Accepting interview recommendations alone does not start a new build phase. Never paste secret keys into chat or commit them.
-
-## Customize it and keep it updated
-
-You may privately add `references/local-profile.md` inside your installed copy for your preferred language, stack or style. It is optional. Keep it out of public commits; the repository ignores that filename. A preference is not permission to spend money or proof that you own an account.
-
-To update, download the new version and compare it with your installed folder. Preserve your changes before replacing it. To remove it, delete only the installed `idea-to-mvp` skill folder or use your agent's documented uninstall control. See [troubleshooting](docs/agent-installation.md#troubleshooting).
-
-## Inside the box
-
-- `skills/idea-to-mvp/SKILL.md`: the main workflow.
-- `references/`: interview, Spec Kit and delivery guidance.
-- `assets/`: blank templates for the product, project instructions and workflow state.
-- `agents/openai.yaml`: Codex display and invocation metadata.
-
-The shared files contain instructions and blank templates, not the creator's projects, personal setup or chat history. [Read the privacy guide](docs/privacy.md) before sharing output from your own future use.
+<p align="center">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-6366f1"></a>
+  <a href="docs/agent-installation.md"><img alt="Guides for 15 agents" src="https://img.shields.io/badge/agent%20guides-15-8b5cf6"></a>
+  <img alt="English and Arabic guides" src="https://img.shields.io/badge/English%20%2B%20Arabic-guides-0e9f8a">
+</p>
 
 ---
 
-Created by [eyoussef-builds](https://github.com/eyoussef-builds) · [hello@eyoussef.me](mailto:hello@eyoussef.me) · [eyoussef.me](https://eyoussef.me)
+## 👋 What is Idea to MVP?
+
+You have an idea for an app. You tell your AI, and it starts writing code. Then you realize you never agreed on **who the app is for, what it should do, or how people will use it**.
+
+**Idea to MVP gives your AI a way to work through the idea with you, before and during the build.**
+
+1. You **describe your idea**, in your own words.
+2. The assistant **researches it and asks questions**, with a recommendation for each one.
+3. You **review a clear plan**, then say when you want it built.
+4. It follows the agreed plan through **building, testing and the authorized release**.
+
+<p align="center"><img src="docs/images/how-it-works-en.svg" alt="Share the idea, answer questions, review the plan, approve and build" width="100%"></p>
+
+It is for people starting a software project: a first-time founder, a solo builder, or someone with an idea they cannot quite explain yet. **You do not need a finished brief.** Rough notes, links and “I want something like this, but…” are enough to start.
+
+### What can it help with?
+
+| You want to… | The assistant helps you… |
+| --- | --- |
+| 🔎 Understand the idea | Research the problem, alternatives and references you share. |
+| 💬 Make decisions | Answer useful questions, each with a recommendation and a reason. |
+| 📝 Put it into words | Create `project.md`: what the product is, how it works and what to build. |
+| 👀 See it before building | Review a simple screen preview and an example of the main output. |
+| 🧩 Organize the build | Use the official GitHub Spec Kit workflow for specifications and tasks. |
+| 🛠️ Build the first version | Implement the complete agreed experience and test important behavior. |
+| 🔄 Come back tomorrow | Resume from saved decisions and the current workflow state. |
+
+**MVP** means your first useful version. For example, a meal-planning app that takes ingredients and produces a plan people can follow.
+
+---
+
+<a id="installation"></a>
+
+## 📥 Install it — step by step
+
+**You need:** a coding assistant that can read files. You might already use Codex, Claude Code, Cursor, Gemini CLI or another agent. A **skill** is simply a folder of instructions you add to that assistant.
+
+### The easiest way: let your assistant install it
+
+1. **Open your coding assistant.** Use a session that can download and save files.
+2. **Copy and send this message:**
+
+   ```text
+   Install idea-to-mvp from https://github.com/eyoussef-builds/idea-to-mvp.
+   Read the installation guide and inspect the skill first. Install the complete
+   skills/idea-to-mvp folder in this agent's supported personal skill directory.
+   Preserve any existing customized copy. Tell me when it is ready and how to use it.
+   ```
+
+3. **Read any download or file-write permission request** from your agent. Installation needs permission to save the skill folder.
+4. **Check it is ready.** Ask: “Can you see the idea-to-mvp skill? Tell me how to start it.”
+
+🎉 **Installed? Jump to [your first project](#first-use).**
+
+### Prefer to copy the folder yourself?
+
+1. **[Download the ZIP](https://github.com/eyoussef-builds/idea-to-mvp/archive/refs/heads/main.zip).**
+2. **Unzip it.** On Mac, double-click it. On Windows, right-click → **Extract All…**.
+3. Open the extracted folder → **skills**. Inside is the complete **idea-to-mvp** folder.
+4. Follow the [guide for your agent](docs/agent-installation.md) to put that folder in the right place.
+5. Reopen your agent if the skill does not appear, then ask it to use **idea-to-mvp**.
+
+The guide covers **15 agents**, with macOS/Linux and Windows instructions, plus an explicit-read fallback for other assistants. You only need to install it for the assistant you actually use.
+
+---
+
+<a id="first-use"></a>
+
+## 🚀 Your first project
+
+### 1. Tell it the idea
+
+Open a folder for your new project and start your assistant there. In **Codex**, send:
+
+```text
+Use $idea-to-mvp. Let's start a new project.
+I want an app that helps people plan meals from ingredients they already have.
+Research the idea, then interview me with your recommendations before building.
+```
+
+The meal app is a **fictional example**. Replace it with your idea. In Claude Code, use `/idea-to-mvp`; for other agents, follow their installation guide or ask for the skill by name.
+
+### 2. Answer the questions
+
+The assistant researches, then asks about the people you want to help, their journey, product rules, design and price.
+
+> 💬 **“I don't know which option to choose.”** That is why every question comes with a recommendation and a short reason. You can accept it, change it, or ask the assistant to explain.
+
+You can say **“all recommended, except…”** to accept the suggestions it just presented. It usually asks a few related questions at a time. If an important question is still unanswered, it keeps asking—there is no fixed interview limit.
+
+### 3. Review what you are going to build
+
+The assistant writes **`project.md`** and prepares a small preview of the main experience. You read it and say what needs changing. You can skip the preview if you prefer.
+
+| In the plan | In everyday words |
+| --- | --- |
+| Customer and problem | Who needs this, and what are they trying to do? |
+| Journeys and outputs | What does someone click, and what useful thing do they get? |
+| Rules and pricing | What is allowed, what is paid, and how do limits work? |
+| Scope | What will be in this first version? |
+| Acceptance checks | What must work before we call it finished? |
+
+### 4. Say when you want it built
+
+When the plan looks right, send:
+
+```text
+Approved. Use official GitHub Spec Kit, set a goal if this agent supports it,
+and build the MVP in project.md. Complete the agreed scope, test it, and prepare
+the agreed delivery. Ask me about any unresolved account, budget or deployment decisions.
+```
+
+The assistant checks the actual tools and access, organizes the build with **GitHub Spec Kit**, implements the agreed product and verifies it. It does not need you to repeat approval at every routine step. New material decisions still come back to you.
+
+### 5. Try the result
+
+Walk through the product and review the checks and handoff. Agree on whether delivery means **ready for you to add specifically deferred provider credentials** or **fully activated with the required real-provider checks completed**. The [delivery guide](skills/idea-to-mvp/references/delivery.md) explains both.
+
+<details>
+<summary><b>🔧 Curious how the workflow stays organized?</b></summary>
+
+- `research/` holds source findings and the interview/decision record.
+- `project.md` is the accepted product definition.
+- `docs/workflow-state.md` records the current phase, approvals, questions and next action.
+- Official Spec Kit generates its own specifications, plan, contracts and tasks. The assistant checks the installed version and uses the integration for your agent.
+- A native goal is used when authorized and available. Otherwise the objective and checks are saved in the workflow state. A saved file does not create background execution.
+
+Read the [interview guide](skills/idea-to-mvp/references/interview.md), [Spec Kit handoff](skills/idea-to-mvp/references/spec-kit.md) or [official Spec Kit quickstart](https://github.github.io/spec-kit/quickstart.html) for the details.
+
+</details>
+
+---
+
+## 🔒 Privacy in one minute
+
+- This repository contains **reusable instructions and blank templates**. No real project briefs or private chats are included.
+- Your project's files stay in the workspace you choose. Publishing them is a separate decision.
+- Your assistant and any connected services use their own permissions and data settings.
+- Put private preferences in your installed `references/local-profile.md`, and keep secrets out of chat and Git.
+
+Full details: [Privacy guide](docs/privacy.md).
+
+---
+
+<a id="questions"></a>
+
+## ❓ Questions & answers
+
+<details>
+<summary><b>Is this another AI app I need to pay for?</b></summary>
+
+No. It is an instruction folder for your existing coding assistant. The skill is MIT-licensed and free to use. Your agent subscription, API usage and any project services keep their own costs.
+
+</details>
+
+<details>
+<summary><b>Do I need to know how to code?</b></summary>
+
+You can begin with an idea and plain-language answers. Building and operating the result still needs an agent with development tools, and your decisions about accounts, budgets and release. The assistant explains the missing setup when it matters.
+
+</details>
+
+<details>
+<summary><b>What if I only want help shaping the idea?</b></summary>
+
+Say so. You can stop after research, the interview or the plan. Accepting interview recommendations does not by itself start a new build phase.
+
+</details>
+
+<details>
+<summary><b>What is Spec Kit? Must I install it first?</b></summary>
+
+It is GitHub's separate toolkit for turning written requirements into a build plan. You can research and interview without it. At build handoff, the assistant checks the official setup for your agent. This repository does not bundle Spec Kit.
+
+</details>
+
+<details>
+<summary><b>Can I use it with my existing project?</b></summary>
+
+Yes, when you want to resume this workflow or shape a substantial product direction. It reads existing decisions and resumes rather than overwriting them. Ordinary bug fixes or small features do not need a new discovery interview.
+
+</details>
+
+<details>
+<summary><b>The skill does not appear. What should I check?</b></summary>
+
+Install the complete folder in your agent's supported directory. Check that `SKILL.md` is directly inside `idea-to-mvp`, reopen or reload the agent, then invoke it explicitly. See [troubleshooting](docs/agent-installation.md#troubleshooting).
+
+</details>
+
+<details>
+<summary><b>How do I update or remove it?</b></summary>
+
+Download the new version, compare it with your installed copy, and preserve your modifications and private profile before replacing files. To remove it, delete only the installed `idea-to-mvp` folder or use your agent's uninstall control. Your project files are separate.
+
+</details>
+
+<details>
+<summary><b>Can I share it or use it for client work?</b></summary>
+
+Yes. The [MIT license](LICENSE) allows use, modification and sharing, including commercial use, with its copyright/license notice retained. Share [this repository](https://github.com/eyoussef-builds/idea-to-mvp) so others can find the guides and updates.
+
+</details>
+
+---
+
+## 🛠️ For developers
+
+```text
+skills/idea-to-mvp/
+  SKILL.md       Main workflow
+  references/    Interview, Spec Kit and delivery guidance
+  assets/        Blank product and workflow templates
+  agents/        Codex metadata
+docs/            Installation for 15 agents and privacy guides, in both languages
+```
+
+The workflow adapts to the host's available tools. It does not install accounts, grant spending authority or require a particular cloud provider. The supporting files explain the exact handoffs and delivery checks.
+
+## 🤝 Support & contact
+
+Questions or ideas? [Open an issue](https://github.com/eyoussef-builds/idea-to-mvp/issues) in English or Arabic. For private matters, email **[hello@eyoussef.me](mailto:hello@eyoussef.me)**.
+
+**Created by [eyoussef-builds](https://github.com/eyoussef-builds)** · ✉️ [hello@eyoussef.me](mailto:hello@eyoussef.me) · 🌐 [eyoussef.me](https://eyoussef.me) · [MIT license](LICENSE)
