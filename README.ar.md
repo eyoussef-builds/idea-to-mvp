@@ -4,7 +4,7 @@
   <img src="docs/images/banner-ar.svg" alt="من الفكرة إلى منتج — احكِ الفكرة وابدأ البناء مع مساعدك" width="100%">
 </p>
 
-<p align="center"><a href="README.md"><b>Read this guide in English</b></a> · <a href="#installation">التثبيت</a> · <a href="#first-use">جرّبها</a> · <a href="#questions">أسئلة وأجوبة</a></p>
+<p align="center"><a href="README.md"><b>Read this guide in English</b></a> · <a href="#installation">التثبيت</a> · <a href="#first-use">جرّبها</a> · <a href="#questions">أسئلة وأجوبة</a> · <a href="#share">شاركها</a></p>
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-6366f1"></a>
@@ -217,6 +217,21 @@
 نعم. يسمح [ترخيص MIT](LICENSE) بالاستخدام والتعديل والمشاركة، بما فيها الاستخدام التجاري، مع إبقاء إشعار الحقوق والترخيص. شارك [رابط المستودع](https://github.com/eyoussef-builds/idea-to-mvp) ليجد الآخرون الأدلة والتحديثات.
 
 </details>
+
+---
+
+<a id="share"></a>
+
+## 🖼️ شارك المهارة
+
+صورتان تشرحان ما تفعله المهارة وكيف تبدأ استخدامها، مع رابط GitHub الصحيح.
+
+[تحميل الصورة الإنجليزية](docs/images/infographic-en.png) · [تحميل الصورة العربية](docs/images/infographic-ar.png) · [نصوص جاهزة للمشاركة باللغتين](docs/share.md)
+
+<p align="center">
+  <a href="docs/images/infographic-en.png"><img src="docs/images/infographic-en.png" alt="شرح المهارة بالإنجليزية وطريقة البدء" width="48%"></a>
+  <a href="docs/images/infographic-ar.png"><img src="docs/images/infographic-ar.png" alt="شرح المهارة بالعربية وطريقة البدء" width="48%"></a>
+</p>
 
 ---
 

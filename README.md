@@ -2,7 +2,7 @@
   <img src="docs/images/banner-en.svg" alt="Idea to MVP — tell your AI the idea, build it together" width="100%">
 </p>
 
-<p align="center"><a href="README.ar.md"><b>اقرأ هذا الدليل بالعربية</b></a> · <a href="#installation">Install</a> · <a href="#first-use">Try it</a> · <a href="#questions">Questions &amp; answers</a></p>
+<p align="center"><a href="README.ar.md"><b>اقرأ هذا الدليل بالعربية</b></a> · <a href="#installation">Install</a> · <a href="#first-use">Try it</a> · <a href="#questions">Questions &amp; answers</a> · <a href="#share">Share</a></p>
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-6366f1"></a>
@@ -215,6 +215,21 @@ Download the new version, compare it with your installed copy, and preserve your
 Yes. The [MIT license](LICENSE) allows use, modification and sharing, including commercial use, with its copyright/license notice retained. Share [this repository](https://github.com/eyoussef-builds/idea-to-mvp) so others can find the guides and updates.
 
 </details>
+
+---
+
+<a id="share"></a>
+
+## 🖼️ Share this skill
+
+Two infographics explain what the skill does and how to start, with its GitHub link included.
+
+[English image](docs/images/infographic-en.png) · [Arabic image](docs/images/infographic-ar.png) · [Copyable bilingual captions](docs/share.md)
+
+<p align="center">
+  <a href="docs/images/infographic-en.png"><img src="docs/images/infographic-en.png" alt="English skill explainer and starting instructions" width="48%"></a>
+  <a href="docs/images/infographic-ar.png"><img src="docs/images/infographic-ar.png" alt="Arabic skill explainer and starting instructions" width="48%"></a>
+</p>
 
 ---
 
