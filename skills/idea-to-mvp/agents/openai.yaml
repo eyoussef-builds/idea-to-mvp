@@ -1,0 +1,6 @@
+interface:
+  display_name: "Idea to MVP"
+  short_description: "Research, interview, specify, and build a complete MVP"
+  default_prompt: "Use $idea-to-mvp to start a new project from my idea, interview me with recommendations, and guide me through project.md, Spec Kit, and an approved end-to-end build."
+policy:
+  allow_implicit_invocation: true

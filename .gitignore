@@ -1,0 +1,22 @@
+# Local preferences and private output
+**/references/local-profile.md
+**/profiles/
+**/private/
+**/reports/
+**/output/
+**/evidence/
+**/codex-daily-evidence-*/
+**/*.jsonl
+**/*.jsonl.zst
+**/*.sqlite*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
