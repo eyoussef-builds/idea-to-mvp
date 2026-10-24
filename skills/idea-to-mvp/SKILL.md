@@ -67,6 +67,10 @@ Add the applicable rules from [the project guidance template](assets/project-gui
 
 Where authorized, finish the repository workflow and deploy all affected surfaces, verify the running version, and remove disposable test fixtures. Report the usable result, verification, remaining gaps and exact next steps. Mark a goal complete only against its agreed acceptance boundary. Do not claim proven business demand, measured ROI, flawless software or live integrations without evidence.
 
+## Mandatory final review
+
+Before calling a planning phase or the MVP complete, read and perform [the final review](references/final-review.md). Compare the actual founder-facing documents, preview or usable product with the accepted decisions, references and acceptance boundary. Fix findings and recheck affected outputs; retain concise evidence and disclose unavailable checks. Passing tests or completed Spec Kit tasks alone do not establish a useful finished product. This review does not add a new approval round or expand the authorized phase.
+
 ## Durable project artifacts
 
 Use the project's existing organization; these are defaults, not additional bureaucracy:
